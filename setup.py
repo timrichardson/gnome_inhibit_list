@@ -7,7 +7,7 @@ from os import path
 
 name = 'list_session_inhibitors'
 keywords = 'inhibitors'
-version = '0.9.5'
+version = '0.9.8'
 this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
@@ -33,9 +33,10 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Topic :: Office/Business',
     ],
-    url='https://github.com/timrichardson/zoho_analytics_connector',
+    url='https://github.com/timrichardson/gnome_inhibit_list',
     license='LGPLv3',
 
     #cmdclass=cmdclass,

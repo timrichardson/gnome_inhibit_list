@@ -1,16 +1,17 @@
 command line utility to list session power inhibitors for Linux Gnome users.
 
-Inspired by https://askubuntu.com/a/1239194/152287
+Inspired by https://askubuntu.com/a/1239194/152287 from Alexis Wilke (https://www.m2osw.com/)
 
-#Install Tips
+# Install Tips
 The pip install adds an executable to your path (see usage).
-This assumes you are using Gnome.
+
+This script assumes you are using Gnome.
 
 ## Prerequisite packages
 The python package PyGObject is a prerequisite.
 Installation is automatic, but certain system packages must be installed, according to the requirements of PyGObject
 
-For Ubuntu 20.10:
+For Ubuntu 20.10 and 21.04 (perhaps others):
 
 ``sudo apt install python3-pip libgirepository1.0-dev gcc libcairo2-dev pkg-config python3-dev gir1.2-gtk-3.0``
 
@@ -21,7 +22,7 @@ You may get a warning that ~/.local/bin is not on your path.
 When you next login, this will be fixed.
 
 
-#Usage
+# Usage
 
 ``inhibitors list``
 
@@ -34,7 +35,7 @@ With the Gnome Shell plugin Caffeine activate, and a Google Meet running in Fire
     Inhibitor: user Inhibit by Caffeine
 
 
-#Comparison with systemd
+# Comparison with systemd
 
 we can do
 ``$ systemd-inhibit --list``
@@ -58,3 +59,8 @@ which on my desktop gives:
   The Caffeine plugin inhibit is the third line from the bottom. However, it is not obvious. I am sure in this case, because when I deactivate caffeine, the third line disappears.
   
 The Google Meet inhibitor is not even listed at all. However, it is definitely an inhibitor.
+
+
+### Building and uploading
+    python3 -m build
+    python3 -m twine upload --skip-existing dist/* 
