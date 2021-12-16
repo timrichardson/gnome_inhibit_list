@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Inhibitor Widget
+Comment=Track which apps are keeping your screen/computer awake with a handy widget.
+Exec=inhibitors widget
+Icon=gnome-power-manager
+Type=Application
+Categories=GNOME;GTK;System;Utility;
