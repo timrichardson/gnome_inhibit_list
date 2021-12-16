@@ -21,11 +21,15 @@ setup(
     description='command line utility to list session power inhibitors for Linux Gnome desktop users',
     long_description=long_description,
     long_description_content_type='text/markdown',
+    include_package_data=True,
     packages=['list_session_inhibitors'],
+    data_files=[
+        ('share/applications', ['inhibitor-widget.desktop']),
+    ],
     python_requires='>=3.6',
-    install_requires=['pydbus','PyGObject>=3.40','click'],
-    setup_requires=['pytest-runner', ],
-    entry_points={"console_scripts": ["inhibitors=list_session_inhibitors.inhibitors:main"]},
+    install_requires=['pydbus','PyGObject>=3.40','click','pyqt5'],
+    setup_requires=['pytest-runner', 'setuptools_scm'],
+    entry_points={"console_scripts": ["inhibitors=list_session_inhibitors.main:main"]},
     tests_require=["pytest", ],
     classifiers=[
         'Development Status :: 4 - Beta',
