@@ -1,6 +1,8 @@
-command line utility to list session power inhibitors for Linux Gnome users.
+command line utility and tray widget to list session power inhibitors for Linux Gnome users.
 
 Inspired by https://askubuntu.com/a/1239194/152287 from Alexis Wilke (https://www.m2osw.com/)
+
+![readme_img1.png](readme_img1.png)
 
 # Install Tips
 The pip install adds an executable to your path (see usage).
@@ -24,7 +26,18 @@ When you next login, this will be fixed.
 
 # Usage
 
+To see what is inhibiting you on the command line, run:
+
 ``inhibitors list``
+
+To start up the tray widget, run:
+
+``inhibitors widget``
+Clicking on the widget will reveal which apps are inhibiting power management, if any.
+
+If you'd like it to start up on login, add the following to your startup scripts:
+
+``gtk-launch inhibitor-widget``
 
 ## Example
 With the Gnome Shell plugin Caffeine activate, and a Google Meet running in Firefox:
