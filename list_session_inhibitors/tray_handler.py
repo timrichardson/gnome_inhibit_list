@@ -44,7 +44,6 @@ class TrayHandler:
     def set_icon(self, icon_name):
         # Adding an icon
         icon_name = os.path.join(pkg_path, icon_name)
-        print(f'setting icon: {icon_name}')
         icon = QIcon(icon_name)
 
         # Adding item on the menu bar
