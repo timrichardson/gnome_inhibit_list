@@ -7,7 +7,7 @@ from os import path
 
 name = 'list_session_inhibitors'
 keywords = 'inhibitors'
-version = '0.9.8'
+version = '0.9.9'
 this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
