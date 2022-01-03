@@ -8,7 +8,12 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
 def inhibitor_loop(tray_handler):
     """Checks for inhibitors in Widget mode"""
-    inhibitors = get_inhibitors_pydbus()
+    try:
+        inhibitors = get_inhibitors_pydbus()
+    except KeyError as e:
+        print(f"Caught exception {e}")
+        inhibitors = []
+
     if len(inhibitors) == 0:
         tray_handler.set_icon("uninhibited.png")
         tray_handler.set_inhibitors([])
